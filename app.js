@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+
 const result = document.getElementById('result');
 const btn = document.getElementById('roll-btn');
 
