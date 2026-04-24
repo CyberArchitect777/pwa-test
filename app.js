@@ -5,7 +5,7 @@ if ('serviceWorker' in navigator) {
 const result = document.getElementById('result');
 const btn = document.getElementById('roll-btn');
 
-btn.addEventListener('click', () => {
+function roll() {
   result.classList.add('rolling');
   btn.disabled = true;
 
@@ -14,4 +14,7 @@ btn.addEventListener('click', () => {
     result.classList.remove('rolling');
     btn.disabled = false;
   }, 150);
-});
+}
+
+btn.addEventListener('click', roll);
+roll();
